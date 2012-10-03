@@ -28,8 +28,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include <EthernetClient.h>
-#include <EthernetServer.h>
+#include <WiFi.h>
 
 /********************************************************************
  * CONFIGURATION
@@ -274,8 +273,8 @@ public:
   size_t write(const char *data, size_t length);
 
 private:
-  EthernetServer m_server;
-  EthernetClient m_client;
+  WiFiServer m_server;
+  WiFiClient m_client;
   const char *m_urlPrefix;
 
   unsigned char m_pushback[32];
